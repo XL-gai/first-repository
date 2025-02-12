@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哆啦A梦</title>
+    <!-- TODO 这里完成样式的设置 -->
+    <style>
+        .header{
+            width:340px;
+            height:300px;
+            background:skyblue;
+            border-radius:50%;
+            margin:auto;
+            border:2px solid #000;
+            position:relative;
+            z-index:1
+        }
+        .face{
+            width:260px;
+            height:240px;
+            border-radius:50%;
+            margin:auto;
+            margin-top:60px;
+            background:#fff;
+            border:1px solid #000;
+            position:relative;
+            z-index:1
+        }
+        .eyes{
+            display:flex;
+            margin:-40px auto;
+            width:180;
+            margin-left: 45px;
+            position: relative;
+            z-index: 0;
+        }
+        .left{
+            width:80px;
+            height:100px;
+            background:#fff;
+            border:1px solid #000;
+            border-radius:50%;
+            transform:rotate(10deg)
+        }
+        .right{
+            width:80px;
+            height:100px;
+            background:#fff;
+            border:1px solid #000;
+            border-radius:50%;
+            transform:rotate(-10deg)
+        }
+        .blackeye{
+            width:35px;
+            height:48px;
+            background:#fff;
+            border:1px solid #000;
+            border-radius:50%;
+            transform:rotate(10deg);
+            position:absolute;
+            top:30px;
+            left:40px;
+            background:#000;
+            transform:rotate(-5deg)
+        }
+        .rblackeye{
+            width:35px;
+            height:48px;
+            background:#fff;
+            border:1px solid #000;
+            border-radius:50%;
+            transform:rotate(10deg);
+            position:absolute;
+            top:30px;
+            left:3px;
+            background:#000;
+            transform:rotate(5deg)
+        }
+        .whiteeye{
+            background:#fff;
+            position:absolute;
+            top:20;
+            left:20;
+            width:10px;
+            height:15px;
+            border-radius:50%
+        }
+        .rwhiteeye{
+            background:#fff;
+            position:absolute;
+            top:20;
+            left:5;
+            width:10px;
+            height:15px;
+            border-radius:50%
+        }
+        .nose{
+            position:relative;
+            margin:50px 50px;
+            z-index: 1;
+        }
+        .rednose{
+            width: 30px;
+            height:30px;
+            background:red;
+            border-radius:50%;
+            margin-left:63px;
+            margin-top:-85px;
+            position: relative;
+        }
+        .whitenose{
+            width:9px;
+            height:10px;
+            background:#fff;
+            position:absolute;
+            top:7px;
+            left:10px;
+            border-radius:50%                
+        }
+        .bread{
+            position:absolute;
+            width:100%
+        }
+        .l_first{
+            width:70px;
+            height:1.5px;
+            background:#000;
+            margin-top:-30px;
+            margin-left:30px;
+            transform:rotate(20deg)            
+        }
+        .l_second{
+            width:72px;
+            height:1.5px;
+            background:#000;
+            margin-top:20px;
+            margin-left:24px;
+            transform:rotate(0deg)            
+        }
+        .l_third{
+            width:70px;
+            height:1.5px;
+            background:#000;
+            margin-top:20px;
+            margin-left:30px;
+            transform:rotate(-20deg)            
+        }
+        .r_first{
+            width:70px;
+            height:1.5px;
+            background:#000;
+            margin-top:-44px;
+            margin-left:160px;
+            transform:rotate(-20deg)            
+        }
+        .r_second{
+            width:72px;
+            height:1.5px;
+            background:#000;
+            margin-top:20px;
+            margin-left:165px;
+            transform:rotate(0deg)            
+        }
+        .r_third{
+            width:70px;
+            height:1.5px;
+            background:#000;
+            margin-top:20px;
+            margin-left:160px;
+            transform:rotate(20deg)            
+        }
+        .line{
+            position:relative;
+            width:100%
+        }
+        .Vertical{
+            width:2px;
+            height:100px;
+            background:#000;
+            margin-left:128px;
+            margin-top:-43px
+        }
+        .Arc{
+            width:100px;
+            height:30px;
+            border-radius:0 0 50% 50%/0 0 100% 100%;
+            border:2px solid #000;
+            border-top:none;
+            margin-left:76.5px;
+            margin-top:-30px;
+        }
+        .neck{
+            width:220px;
+            height:100px;
+            background:red;
+            border-radius:50%;
+            margin:auto;
+            border:2px solid #000;
+            position:relative;
+            margin-top: -70px;
+            z-index:0    
+        }
+        
+        .round{
+            position: relative;
+            width:25px;
+            height:25px;
+            background:yellow;
+            border-radius:50%;
+            border:1px solid;
+            margin-left:95px;
+            margin-top:85px;
+        }
+        .hanging{
+            width:30px;
+            height:3px;
+            position: relative;
+            background:yellow;
+            border:1px solid;
+            border-radius:30%;
+            margin-left:92px;
+            margin-top:-18px
+        }
+        .bell_line{
+            position:relative;
+            width:2px;
+            height:10px;
+            background:#000;
+            margin-left:107.8px;
+            margin-top:3px;
+        }
+        .word{
+            color:white;
+            font-size:24;
+            text-align:center;
+            background:linear-gradient(to right,#187187,#871871)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="face">
+            <div class="eyes">
+                <div class="left">
+                    <div class="blackeye">
+                        <div class="whiteeye"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="rblackeye">
+                        <div class="rwhiteeye"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nose">
+                <div class="rednose">
+                    <div class="whitenose"></div>
+                </div>
+            </div>
+            <div class="beard">
+                <div class="left_beard">
+                    <div class="l_first"></div>
+                    <div class="l_second"></div>
+                    <div class="l_third"></div>
+                </div>
+                <div class="right_beard">
+                    <div class="r_first"></div>
+                    <div class="r_second"></div>
+                    <div class="r_third"></div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="Vertical"></div>
+                <div class="Arc"></div>
+            </div>
+        </div></div>
+    <div class="neck">
+        
+        <div class="bell">
+            
+            <div class="round"></div>
+            <div class="hanging"></div><div class="bell_line"></div>
+        </div>
+    </div>
+    <p class="word">Hope you will have a nice day</p>
+</body>
+
+</html>
